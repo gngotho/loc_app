@@ -29,7 +29,10 @@ TEMPLATE_DEBUG = False
 
 ALLOWED_HOSTS = [*]
 
-
+STATIC_ROOT = os.path.join(
+ os.path.dirname(
+  os.path.dirname(
+   os.path.abspath(__file__))), 'static')
 # Application definition
 
 INSTALLED_APPS = (
@@ -107,7 +110,7 @@ TEMPLATE_DIRS = (
 STATIC_URL = '/static/'
 
 # static media
-STATIC_ROOT                         = os.path.join(BASE_DIR, 'static')
+#STATIC_ROOT                         = os.path.join(BASE_DIR, 'static')
 STATIC_URL                          = '/static/'
 STATICFILES_DIRS                    = (
     os.path.join(BASE_DIR, 'polygonapp', 'static', 'static'),
