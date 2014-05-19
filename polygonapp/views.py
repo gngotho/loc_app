@@ -31,7 +31,7 @@ def index(request):
 		p = Polygon(cord_list)
 		region_obj = Region(name=title, mpolygon=p)
 		region_obj.save()
-	return render_to_response('test5.html', {},
+	return render_to_response('draw.html', {},
                           context_instance=RequestContext(request))
 
 
@@ -41,5 +41,5 @@ def region(request):
 	geojson = pol_obj.mpolygon.geojson
 	coords =  pol_obj.mpolygon.coords[0]
 	centre =  pol_obj.mpolygon.centroid.coords
-	return render_to_response('draw.html', 
+	return render_to_response('maps.html', 
 		{'geojson': geojson,'coords':coords, 'centroid': centre, }, context_instance=RequestContext(request))
