@@ -31,6 +31,8 @@ def index(request):
 		p = Polygon(cord_list)
 		region_obj = Region(name=title, mpolygon=p)
 		region_obj.save()
+
+		return region(request)
 	return render_to_response('draw.html', {},
                           context_instance=RequestContext(request))
 
