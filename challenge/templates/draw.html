@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Blitz Gmap Editor - Test</title>
+<script src="http://maps.googleapis.com/maps/api/js?sensor=false&libraries=drawing,geometry" type="text/javascript"></script>
+<script type="text/javascript" src= "http://geoxml3.googlecode.com/svn/branches/polys/geoxml3.js"></script>
+<script type="text/javascript" src="http://geoxml3.googlecode.com/svn/trunk/ProjectedOverlay.js"></script>
+<script src="{{ STATIC_URL }}jscolor/jscolor.js" type="text/javascript"></script>
+<script src="{{ STATIC_URL }}json2.js" type="text/javascript"></script>
+<script src="{{ STATIC_URL }}xmlwriter.js" type="text/javascript"></script>
+  <script src="{{ STATIC_URL }}blitz.gmap3.js" type="text/javascript"></script>
+
+</head>
+<body>
+<table><tr><td>
+<h1>Simple Polygon app drawer </h1>
+</td><td>
+</td></tr></table>
+<div id="myMap" style="height:400px; width:100%;"></div>
+<input type="button" value="clear map" onclick="BlitzMap.deleteAll();" /><input type="button" value="toggle edit mode" onclick="BlitzMap.toggleEditable();" />
+<input type="button" value="Sho coodinates and submit" onclick="BlitzMap.toJSONString();" />
+<input type="submit" value="Submit" onclick="BlitzMap.to_url()">
+<textarea id="mapData" style="width:50%; height:200px">
+</textarea>
+<script type="text/javascript">
+        BlitzMap.setMap( 'myMap', true, 'mapData' );
+</script>
+</script>
+<script type="text/javascript">
+_uacct = "UA-162157-1";
+urchinTracker();
+</script>
+</body>
+</html>
