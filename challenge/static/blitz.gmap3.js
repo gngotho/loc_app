@@ -849,9 +849,18 @@ var BlitzMap = new function(){
     this.to_url = function(){
         var obj = this.toJSONString()
         //alert(obj);
-        url = '/polygon/';
+        url = '/';
         xmlhttp = new XMLHttpRequest()
         //alert(obj);
+        xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+
+    alert('success');
+    document.location.href="/show_polygon/";
+    }
+  }
 
         xmlhttp.open("POST",url,true);  
         xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
