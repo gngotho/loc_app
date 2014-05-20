@@ -23,16 +23,13 @@ PROJECT_ROOT = os.path.dirname(__file__)
 SECRET_KEY = ')5zsk!+*&l#rq5#&v^l$xm(d8skhio%&h51c6y^%sw1jtgrcsg'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-TEMPLATE_DEBUG = False
+TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
-STATIC_ROOT = os.path.join(
- os.path.dirname(
-  os.path.dirname(
-   os.path.abspath(__file__))), 'static')
+#STATIC_ROOT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'static')
 # Application definition
 
 INSTALLED_APPS = (
@@ -110,9 +107,10 @@ TEMPLATE_DIRS = (
 STATIC_URL = '/static/'
 
 # static media
-#STATIC_ROOT                         = os.path.join(BASE_DIR, 'static')
-STATIC_URL                          = '/static/'
+STATIC_ROOT                         = os.path.join(BASE_DIR, 'challenge' 'static')
 STATICFILES_DIRS                    = (
     os.path.join(BASE_DIR, 'polygonapp', 'static', 'static'),
     os.path.join(BASE_DIR, 'challenge', 'static'),
 )
+
+
