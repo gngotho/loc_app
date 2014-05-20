@@ -27,7 +27,7 @@ DEBUG = False
 
 TEMPLATE_DEBUG = False
 
-ALLOWED_HOSTS = [*]
+ALLOWED_HOSTS = ['*']
 
 STATIC_ROOT = os.path.join(
  os.path.dirname(
