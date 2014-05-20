@@ -39,7 +39,7 @@ def index(request):
 
 def region(request):
 	pol_obj = Region.objects.all().order_by('-id')[0]
-	geojson = pol_obj.mpolygon.geojson
+	#geojson = pol_obj.mpolygon.geojson #not suported without gdal
 	coords =  pol_obj.mpolygon.coords[0]
 	centre =  pol_obj.mpolygon.centroid.coords
 	return render_to_response('maps.html', 
