@@ -13,7 +13,7 @@ import os, sys
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
-PROJECT_ROOT                        = os.path.dirname(__file__)
+PROJECT_ROOT = os.path.dirname(__file__)
 
 
 # Quick-start development settings - unsuitable for production
