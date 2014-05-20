@@ -18,9 +18,9 @@
 </td></tr></table>
 <div id="myMap" style="height:400px; width:100%;"></div>
 <input type="button" value="clear map" onclick="BlitzMap.deleteAll();" /><input type="button" value="toggle edit mode" onclick="BlitzMap.toggleEditable();" />
-<input type="button" value="Sho coodinates and submit" onclick="BlitzMap.toJSONString();" />
+<input type="button" value="Show coodinates " onclick="BlitzMap.toJSONString();" />
 <input type="submit" value="Submit" onclick="BlitzMap.to_url()">
-<textarea id="mapData" style="width:50%; height:200px">
+<textarea id="mapData" style="width:100%; height:50px">
 </textarea>
 <script type="text/javascript">
         BlitzMap.setMap( 'myMap', true, 'mapData' );

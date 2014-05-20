@@ -851,7 +851,7 @@ var BlitzMap = new function(){
         //alert(obj);
         url = '/polygon/';
         xmlhttp = new XMLHttpRequest()
-        alert(obj);
+        //alert(obj);
 
         xmlhttp.open("POST",url,true);  
         xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
