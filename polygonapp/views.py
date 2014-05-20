@@ -43,4 +43,4 @@ def region(request):
 	coords =  pol_obj.mpolygon.coords[0]
 	centre =  pol_obj.mpolygon.centroid.coords
 	return render_to_response('maps.html', 
-		{'geojson': geojson,'coords':coords, 'centroid': centre, }, context_instance=RequestContext(request))
+		{'coords':coords, 'centroid': centre, }, context_instance=RequestContext(request))
